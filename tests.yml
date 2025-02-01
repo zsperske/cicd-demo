@@ -1,0 +1,10 @@
+device:
+  - model: Pixel2
+    version: 30 # Android 11
+  - model: Pixel6
+    version: 33 # Android 13
+    
+type: instrumentation
+app: app/build/outputs/apk/debug/app-debug.apk
+test: app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+timeout: 30m 
