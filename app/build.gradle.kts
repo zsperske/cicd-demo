@@ -2,6 +2,7 @@ plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.android)
   alias(libs.plugins.kotlin.compose)
+  id("com.google.gms.google-services")
 }
 
 android {
@@ -33,6 +34,11 @@ android {
   }
   buildFeatures {
     compose = true
+  }
+  lint {
+    abortOnError = true
+    checkReleaseBuilds = true
+    warningsAsErrors = true
   }
 }
 
