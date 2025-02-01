@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "780729098529",
+    "project_id": "ci-cd-demo-75798",
+    "storage_bucket": "ci-cd-demo-75798.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780729098529:android:e3ec879660d9cecbc8de60",
+        "android_client_info": {
+          "package_name": "com.sperske.cicddemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX2da9r9H9AvqFmi_MqvpoS5AVtaamHwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
