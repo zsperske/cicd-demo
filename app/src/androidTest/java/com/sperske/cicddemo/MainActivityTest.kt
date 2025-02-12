@@ -12,11 +12,6 @@ class MainActivityTest {
 
     @Test
     fun greetingIsDisplayed() {
-        // Given the app is launched
-
-        // When nothing is done (initial state)
-
-        // Then "Hello Android!" should be displayed
         composeTestRule.onNodeWithText("Hello Android!").assertIsDisplayed()
     }
 } 
