@@ -27,6 +27,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.sperske.cicddemo.ui.theme.CICDDemoTheme
 import com.sperske.cicddemo.ui.theme.HuskyPurple
 import com.sperske.cicddemo.ui.theme.HuskyGold
+import androidx.compose.foundation.Image
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.ui.res.painterResource
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
+import androidx.compose.ui.unit.dp
 
 class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,7 +61,7 @@ fun Greeting(
   name: String, 
   modifier: Modifier = Modifier
 ) {
-  var isVisible by remember { mutableStateOf(true) }
+  var isLogoVisible by remember { mutableStateOf(false) }
   
   Box(
     modifier = modifier.fillMaxSize().background(HuskyPurple),
@@ -73,6 +81,30 @@ fun Greeting(
           )
         )
       )
+      
+      Spacer(modifier = Modifier.height(16.dp))
+      
+      Button(
+        onClick = { isLogoVisible = !isLogoVisible },
+        colors = ButtonDefaults.buttonColors(
+          containerColor = HuskyGold
+        )
+      ) {
+        Text(
+          text = if (isLogoVisible) "Hide Logo" else "Show Logo",
+          color = HuskyPurple
+        )
+      }
+      
+      Spacer(modifier = Modifier.height(16.dp))
+      
+      if (isLogoVisible) {
+        Image(
+          painter = painterResource(id = R.drawable.logo),
+          contentDescription = "UW Logo",
+          modifier = Modifier.size(200.dp)
+        )
+      }
     }
   }
 }
