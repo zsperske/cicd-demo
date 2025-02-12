@@ -12,11 +12,9 @@ class MainActivityTest {
 
     @Test
     fun greetingIsDisplayed() {
-        // Given the app is launched
+        // To make sure Firebase captures a video...
+        Thread.sleep(3000L)
 
-        // When nothing is done (initial state)
-
-        // Then "Hello Android!" should be displayed
-        composeTestRule.onNodeWithText("Hello Android!").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Hello CSE 403!").assertIsDisplayed()
     }
 } 
