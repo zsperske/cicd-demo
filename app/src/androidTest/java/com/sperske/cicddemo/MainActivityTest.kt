@@ -15,6 +15,6 @@ class MainActivityTest {
         // To make sure Firebase captures a video...
         Thread.sleep(3000L)
 
-        composeTestRule.onNodeWithText("Hello Android!").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Hello CSE 403!").assertIsDisplayed()
     }
 } 
